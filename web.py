@@ -22,12 +22,7 @@ def apps():
     ]
 
     return render_template("apps.html", apps=app_list)
-
-
 # --- ポイ活ページ ---
-
-
-
 @app.route("/poikatu")
 
 
