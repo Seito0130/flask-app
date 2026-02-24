@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sit | ホーム</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="profile">
+    <img src="{{ url_for('static', filename='images/icon.jpg') }}" class="icon" alt="アイコン">
+    <h1>無名 sit</h1>
+    <p class="bio">IT専門学校在学中</p>
+</div>
+
+<div class="container">
+    <a class="btn" href="{{ url_for('apps') }}">便利なアプリ</a>
+    <a class="btn" href="{{ url_for('poikatu') }}">ポイ活</a>
+    <a class="btn" href="{{ url_for('items') }}">おすすめ商品</a>
+</div>
+
+</body>
+</html>
