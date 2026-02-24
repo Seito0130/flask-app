@@ -9,34 +9,29 @@
 <body>
 
 <nav class="global-nav">
-    <a href="{{ url_for('index') }}">ホーム</a>
-    <a href="{{ url_for('apps') }}">アプリ</a>
-    <a href="{{ url_for('items') }}">商品</a>
-    <a href="{{ url_for('poikatu') }}">ポイ活</a>
+    <a href="{{ url_for('index') }}" class="{{ 'active' if request.path == url_for('index') else '' }}">ホーム</a>
+    <a href="{{ url_for('apps') }}" class="{{ 'active' if request.path == url_for('apps') else '' }}">便利アプリ</a>
+    <a href="{{ url_for('items') }}" class="{{ 'active' if request.path == url_for('items') else '' }}">商品</a>
+    <a href="{{ url_for('poikatu') }}" class="{{ 'active' if request.path == url_for('poikatu') else '' }}">ポイ活</a>
 </nav>
 
-<h2>便利なアプリ</h2>
 
-<div class="card-container">
-    {% for app in apps %}
-    <div class="card">
-        <div class="card-image">
-            <img src="{{ url_for('static', filename='images/' + app.img) }}" alt="{{ app.name }}">
-        </div>
-        
-        <div class="card-body">
-            <h3>{{ app.name }}</h3>
-            <p class="stars">{{ app.stars }}</p>
-            <p>{{ app.desc }}</p>
-            
-            <div class="button-group">
-                <a class="btn" href="{{ app.app_url }}" target="_blank">アプリ</a>
-                <a class="btn btn-site" href="{{ app.site_url }}" target="_blank">サイト</a>
+
+<div class="container">
+        <h1 style="text-align: center; color: white; margin-top: 20px;">便利なアプリ</h1>
+        <div class="card-container">
+            {% for item in apps %}
+            <div class="card">
+                <img src="{{ url_for('static', filename='images/' + item.img) }}" alt="{{ item.name }}">
+                
+                <h3>{{ item.name }}</h3>
+                <p class="stars">{{ item.stars }}</p>
+                <p class="desc">{{ item.desc }}</p>
+                
+                <a href="{{ item.site_url }}" class="btn" target="_blank">アプリを開く</a>
             </div>
+            {% endfor %}
         </div>
-    </div>
-    {% endfor %}
-</div>
 
 </body>
 </html>

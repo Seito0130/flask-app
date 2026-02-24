@@ -9,30 +9,26 @@
 <body>
 
 <nav class="global-nav">
-    <a href="{{ url_for('index') }}">ホーム</a>
-    <a href="{{ url_for('apps') }}">アプリ</a>
-    <a href="{{ url_for('items') }}">商品</a>
-    <a href="{{ url_for('poikatu') }}">ポイ活</a>
+    <a href="{{ url_for('index') }}" class="{{ 'active' if request.path == url_for('index') else '' }}">ホーム</a>
+    <a href="{{ url_for('apps') }}" class="{{ 'active' if request.path == url_for('apps') else '' }}">便利アプリ</a>
+    <a href="{{ url_for('items') }}" class="{{ 'active' if request.path == url_for('items') else '' }}">商品</a>
+    <a href="{{ url_for('poikatu') }}" class="{{ 'active' if request.path == url_for('poikatu') else '' }}">ポイ活</a>
 </nav>
 
 <h2>おすすめ商品</h2>
 
 <div class="card-container">
-    {% for item in items %}
-    <div class="card">
-        <div class="card-image">
-            <img src="{{ url_for('static', filename='images/' + item.img) }}" alt="{{ item.name }}">
-        </div>
-        
-        <div class="card-body">
-            <h3>{{ item.name }}</h3>
-            <p class="stars">{{ item.stars }}</p> 
-            <p>{{ item.desc }}</p>
-            <a class="btn" href="#" target="_blank">購入する</a>
-        </div>
-    </div>
-    {% endfor %} 
+  {% for item in items %}
+  <div class="card">
+    <img src="{{ url_for('static', filename='images/' + item.img) }}" alt="{{ item.name }}">
+    
+    <h3>{{ item.name }}</h3>
+    <p class="stars">{{ item.stars }}</p>
+    <p class="desc">{{ item.desc }}</p>
+    
+    <a href="{{ item.site_url }}" class="btn">詳細を見る</a>
+  </div>
+  {% endfor %}
 </div>
-
 </body>
 </html>
