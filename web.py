@@ -1,31 +1,9 @@
+import os
 from flask import Flask, render_template
 
-
-
-import os
-
-
-
-
-
-
-
-app = Flask(__name__, template_folder='templates',static_folder='static')
-
-
-
-
-
-
-
+app = Flask(__name__, template_folder=os.path.join(os.getcwd(),'templates'),static_folder=os.path.join(os.getcwd(),'static'))
 @app.route('/')
-
-
-
 def index():
-
-
-
     return render_template("index.html")
 
 
@@ -147,7 +125,6 @@ def items():
 
 
 if __name__ == "__main__":
-    import os
-    port = int(os.environ.get("PORT", 5000))
+    port = int(os.environ.get("PORT", 10000))
     # ssl_context='adhoc' でHTTPS化テスト
     app.run(host="0.0.0.0", port=port)
