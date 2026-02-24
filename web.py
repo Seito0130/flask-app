@@ -35,15 +35,15 @@ def poikatu():
 
 
 
-        {"name": "LINEポイント", "img": "poi1.png", "desc": "安全で稼ぎやすい！", "stars": "★★★★★", "site_url": "#"},
+        {"name": "LINEポイント", "img": "poi1.png", "desc": "安全で稼ぎやすい！", "stars": "★★★★★", "https://pointclub.line.me/": "#"},
 
 
 
-        {"name": "QuickPoint", "img": "poi2.jpg", "desc": "PayPay連携が神！", "stars": "★★★★☆", "site_url": "#"},
+        {"name": "QuickPoint", "img": "poi2.jpg", "desc": "PayPay連携が神！", "stars": "★★★★☆", "https://qp.vector.co.jp/entry.php": "#"},
 
 
 
-        {"name": "TikTokLite", "img": "poi3.png", "desc": "動画を見るだけで貯まる！", "stars": "★★★★☆", "site_url": "#"}
+        {"name": "TikTokLite", "img": "poi3.png", "desc": "動画を見るだけで貯まる！", "stars": "★★★★☆", "https://www.tiktok.com/ja-JP/": "#"}
 
 
 
@@ -75,11 +75,11 @@ def items():
 
 
 
-        {"name": "shiroのwhite lily", "img": "item1.jpg", "desc": "コスパ最強の香水！", "stars": "★★★★★", "https://shiro-shiro.jp/item/12722.html?category_from=250": "#"},
+        {"name": "shiroのwhite lily", "img": "item1.jpg", "desc": "コスパ最強の香水！", "stars": "★★★★★", "https://shiro-shiro.jp/item/12722.html?srsltid=AfmBOooH3T9kaMWwxH4q3CHwG_dx7WB3N4WLco9LVAMEslncDUDzRIbB": "#"},
 
 
 
-        {"name": "Applewatch", "img": "item2.jpg", "desc": "モチベ上がる！ スマホをいちいち操作しなくてもこれで簡潔！", "stars": "★★★★★", "https://www.amazon.co.jp/dp/B0FQGP2P41/ref=fs_a_w_2?th=1": "#"}
+        {"name": "Applewatch", "img": "item2.jpg", "desc": "モチベ上がる！ スマホをいちいち操作しなくてもこれで簡潔！ ", "stars": "★★★★★", "https://www.amazon.co.jp/Apple-Watch-GPS%E3%83%A2%E3%83%87%E3%83%AB-46mm%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88%E3%83%96%E3%83%A9%E3%83%83%E3%82%AF%E3%82%A2%E3%83%AB%E3%83%9F%E3%83%8B%E3%82%A6%E3%83%A0%E3%82%B1%E3%83%BC%E3%82%B9%E3%81%A8%E3%83%96%E3%83%A9%E3%83%83%E3%82%AF%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%84%E3%83%90%E3%83%B3%E3%83%89/dp/B0FQG2B81Z/ref=sr_1_4?dib=eyJ2IjoiMSJ9.9_0YHjvm96XsGaEtxhSjavawmGZEzf1gnoJAvvYOTQehb9AovlMnYeNukmev5gjwONtUcpO02OEUR7ZDgL9j2u9wqzgfbcuE2VPhemWvrcdi13lQfr_2kWqJlxP4EMOLA6bfa0-6CaGlzOiw1pc8UZGhRUaNTKk7-gUHyq-CfGpdHdWksz7npMEmgqI9sx-y76rcBwzakALDM5fUJdOhWZReet_aYhI0w4MEnAbTy66_VgAdxJ4KY6wIzX34CFo2UjQ2_bTS8RAVCEWWBkOUIpYgnN5YI8V8ZEwAemAtaIc.bixoOuBWvEIhZCBMJZS5JrhwmXnKR2cVvEbEZfedoC4&dib_tag=se&keywords=%E3%82%A2%E3%83%83%E3%83%97%E3%83%AB%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81&qid=1771943284&sr=8-4&th=1": "#"}
 
     ]
 
