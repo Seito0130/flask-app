@@ -165,42 +165,70 @@ body {
     color: #fff;
 }
 
-/* スマホ用の最終調整設定 */
 @media (max-width: 600px) {
-    /* 1. ナビゲーションのズレを修正 */
+    /* 1. ナビゲーション：横一列にスッキリ収める */
     .global-nav {
-        padding: 10px 0;      /* 上下の余白を少し詰める */
+        padding: 12px 5px;
         display: flex;
-        justify-content: center;
-        overflow-x: auto;     /* 万が一入り切らない時は横スクロールさせる（改行防止） */
-        white-space: nowrap;  /* ★絶対に文字を改行させない */
+        justify-content: space-around; /* 均等に配置 */
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch; /* 指で滑らかにスクロール */
     }
 
     .global-nav a {
-        margin: 0 8px;        /* 左右の間隔をギリギリまで詰める */
-        font-size: 0.8rem;    /* ★文字サイズを小さくして横一列に収める */
-        padding: 5px 2px;
-        flex-shrink: 0;       /* 文字が潰れるのを防ぐ */
+        margin: 0 5px;
+        font-size: 0.85rem;
+        padding: 5px 0;
+        flex-shrink: 0;
     }
 
-    /* 2. プロフィール写真もスマホに合わせて調整 */
+    /* 2. プロフィール：一回り小さくして収まりを良くする */
     .icon {
-        width: 160px;
-        height: 160px;
-        margin: 15px auto;
+        width: 140px;
+        height: 140px;
+        margin: 10px auto;
     }
 
-    /* 3. ホーム画面のボタン（バー）の幅 */
+    /* 3. カードコンテナ：左右の余白を削ってカードを大きく見せる */
+    .card-container {
+        padding: 20px 0; /* 左右のpaddingを消す */
+        gap: 25px;       /* 上下の間隔を少し詰める */
+    }
+
+    /* 4. カード本体：スマホの画面幅にピッタリ合わせる */
+    .card {
+        width: 92% !important;   /* 画面の端に少しだけ隙間を作る */
+        height: auto !important; /* 文字数に応じて高さを変える（はみ出し防止） */
+        min-height: 450px;       /* 最低限の高さは維持 */
+        padding: 15px;           /* 中の余白を少し狭く */
+        margin: 0 auto;          /* 確実に中央へ */
+    }
+
+    /* 5. カード内の画像：スマホだとデカすぎるので少し低くする */
+    .card img {
+        height: 140px !important;
+        margin-bottom: 10px;
+    }
+
+    /* 6. 見出しと説明文：スマホだと文字が大きく感じるので微調整 */
+    .card h3 {
+        font-size: 1.2rem;
+        height: auto;           /* 高さを自由にする */
+        margin-bottom: 5px;
+    }
+
+    .card p {
+        font-size: 0.85rem;
+        height: auto;           /* 説明文も全部読めるように */
+        margin-bottom: 15px;
+    }
+
+    /* 7. ボタン：押しやすいように少しだけ大きく */
     .btn {
         width: 90%;
-        padding: 15px;
-        font-size: 0.9rem;
-    }
-
-    /* 4. カードの調整 */
-    .card {
-        width: 95% !important;
-        height: auto !important;
-        min-height: 400px;
+        padding: 14px;
+        font-size: 1rem;
+        border-radius: 12px;
     }
 }
