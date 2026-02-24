@@ -164,3 +164,43 @@ body {
 .global-nav a:hover {
     color: #fff;
 }
+
+/* スマホ用の最終調整設定 */
+@media (max-width: 600px) {
+    /* 1. ナビゲーションのズレを修正 */
+    .global-nav {
+        padding: 10px 0;      /* 上下の余白を少し詰める */
+        display: flex;
+        justify-content: center;
+        overflow-x: auto;     /* 万が一入り切らない時は横スクロールさせる（改行防止） */
+        white-space: nowrap;  /* ★絶対に文字を改行させない */
+    }
+
+    .global-nav a {
+        margin: 0 8px;        /* 左右の間隔をギリギリまで詰める */
+        font-size: 0.8rem;    /* ★文字サイズを小さくして横一列に収める */
+        padding: 5px 2px;
+        flex-shrink: 0;       /* 文字が潰れるのを防ぐ */
+    }
+
+    /* 2. プロフィール写真もスマホに合わせて調整 */
+    .icon {
+        width: 160px;
+        height: 160px;
+        margin: 15px auto;
+    }
+
+    /* 3. ホーム画面のボタン（バー）の幅 */
+    .btn {
+        width: 90%;
+        padding: 15px;
+        font-size: 0.9rem;
+    }
+
+    /* 4. カードの調整 */
+    .card {
+        width: 95% !important;
+        height: auto !important;
+        min-height: 400px;
+    }
+}

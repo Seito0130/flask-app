@@ -11,7 +11,7 @@
 <nav class="global-nav">
     <a href="{{ url_for('index') }}" class="{{ 'active' if request.path == url_for('index') else '' }}">ホーム</a>
     <a href="{{ url_for('apps') }}" class="{{ 'active' if request.path == url_for('apps') else '' }}">便利アプリ</a>
-    <a href="{{ url_for('items') }}" class="{{ 'active' if request.path == url_for('items') else '' }}">商品</a>
+    <a href="{{ url_for('items') }}" class="{{ 'active' if request.path == url_for('items') else '' }}">便利アイテム</a>
     <a href="{{ url_for('poikatu') }}" class="{{ 'active' if request.path == url_for('poikatu') else '' }}">ポイ活</a>
 </nav>
 
